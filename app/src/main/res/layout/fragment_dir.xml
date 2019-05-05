@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:drawableLeft="@mipmap/go_parent"
+            android:gravity="center"
+            android:text="上一级" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/tv_up"
+            android:src="@mipmap/qpath_search" />
+
+        <HorizontalScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/iv_search">
+
+            <LinearLayout
+                android:id="@+id/linear_dir_path"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/applist_right"
+                    android:padding="5dp"
+                    android:text="我的手机" />
+
+                <TextView
+                    android:id="@+id/tv_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/applist_right"
+                    android:padding="5dp"
+                    android:text="内部存储" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tab_new"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@mipmap/toolbar_new_node"
+            android:gravity="center"
+            android:text="新建" />
+
+        <TextView
+            android:id="@+id/tab_sort"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@mipmap/toolbar_sort"
+            android:gravity="center"
+            android:text="排序" />
+
+        <TextView
+            android:id="@+id/tab_grid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@mipmap/toolbar_view_grid"
+            android:gravity="center"
+            android:text="图标" />
+
+        <TextView
+            android:id="@+id/tab_f5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@mipmap/toolbar_refresh"
+            android:gravity="center"
+            android:text="刷新" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/tabbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@mipmap/toolbar_pop_backup"
+            android:gravity="center"
+            android:text="云备份" />
+
+        <TextView
+            android:id="@+id/tabbar_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@mipmap/op_del"
+            android:gravity="center"
+            android:text="删除" />
+
+        <TextView
+            android:id="@+id/tabbar_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@mipmap/toolbar_pop_send"
+            android:gravity="center"
+            android:text="分享" />
+
+        <TextView
+            android:id="@+id/tabbar_move"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@mipmap/op_move"
+            android:gravity="center"
+            android:text="移动" />
+
+        <TextView
+            android:id="@+id/tabbar_more"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@mipmap/op_more"
+            android:gravity="center"
+            android:text="更多" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/movebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/move_move"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@mipmap/toolbar_pop_backup"
+            android:gravity="center"
+            android:text="移动" />
+
+        <TextView
+            android:id="@+id/move_new"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@mipmap/op_del"
+            android:gravity="center"
+            android:text="新建" />
+
+        <TextView
+            android:id="@+id/move_cancal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@mipmap/toolbar_pop_send"
+            android:gravity="center"
+            android:text="取消" />
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll"
+        android:layout_below="@id/path" />
+
+</RelativeLayout>
